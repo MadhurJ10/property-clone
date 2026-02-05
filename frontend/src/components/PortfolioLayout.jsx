@@ -4,6 +4,8 @@ import TryLaunchSection from "../pages/TryLaunchSection";
 import AmenitiesSection from "./AmenitiesSection";
 import ImageGallery from "./ImageGallery";
 import LocationMap from "./LocationMap";
+import FAQSection from "./FAQSection";
+import GetInTouch from "./GetInTouch";
 
 const PortfolioLayout = () => {
   return (
@@ -81,6 +83,8 @@ const PortfolioLayout = () => {
       <AmenitiesSection/>
       <ImageGallery/>
       <LocationMap/>
+      <FAQSection/>
+      <GetInTouch/>
 
     </div>
   );
