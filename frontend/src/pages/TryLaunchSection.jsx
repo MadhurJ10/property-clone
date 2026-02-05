@@ -46,7 +46,7 @@ const slides = [
 const TryLaunchSection = () => {
     const sectionRef = useRef(null);
     const triggerRef = useRef(null);
-    
+
     // Arrays to store refs for animations
     const imagesRef = useRef([]);
     const textsRef = useRef([]);
@@ -67,7 +67,7 @@ const TryLaunchSection = () => {
             // We push other texts down and make them invisible
             slides.forEach((_, i) => {
                 if (i !== 0) {
-                    gsap.set(textsRef.current[i], { autoAlpha: 0, y: 50 });
+                    gsap.set(textsRef.current[ i ], { autoAlpha: 0, y: 50 });
                 }
             });
 
@@ -77,38 +77,38 @@ const TryLaunchSection = () => {
 
                 // 1. ANIMATE IMAGE REVEAL (Curtain Effect)
                 // Set initial clipped state
-                gsap.set(imagesRef.current[i], { clipPath: "inset(100% 0% 0% 0%)" });
-                
+                gsap.set(imagesRef.current[ i ], { clipPath: "inset(100% 0% 0% 0%)" });
+
                 // Add to timeline
-                tl.to(imagesRef.current[i], {
+                tl.to(imagesRef.current[ i ], {
                     clipPath: "inset(0% 0% 0% 0%)",
                     duration: 1,
                     ease: "none",
                 })
-                
-                // 2. PARALLAX EFFECT FOR IMAGE (Subtle Zoom)
-                .fromTo(imagesRef.current[i].querySelector("img"), 
-                    { scale: 1.3, yPercent: -10 },
-                    { scale: 1, yPercent: 0, duration: 1, ease: "power1.out" },
-                    "<" 
-                )
 
-                // 3. TEXT TRANSITION
-                // Hide Previous Text (Fade Out + Move Up)
-                .to(textsRef.current[i - 1], {
-                    autoAlpha: 0,
-                    y: -50, // Moves up as it disappears
-                    duration: 0.5, // Faster than image for snappy feel
-                    ease: "power2.in",
-                }, "<")
-                
-                // Show Current Text (Fade In + Move Up from bottom)
-                .to(textsRef.current[i], {
-                    autoAlpha: 1,
-                    y: 0, // Settle to center
-                    duration: 0.7,
-                    ease: "power2.out",
-                }, "<+=0.2"); // Slight delay so it enters after previous text leaves
+                    // 2. PARALLAX EFFECT FOR IMAGE (Subtle Zoom)
+                    .fromTo(imagesRef.current[ i ].querySelector("img"),
+                        { scale: 1.3, yPercent: -10 },
+                        { scale: 1, yPercent: 0, duration: 1, ease: "power1.out" },
+                        "<"
+                    )
+
+                    // 3. TEXT TRANSITION
+                    // Hide Previous Text (Fade Out + Move Up)
+                    .to(textsRef.current[ i - 1 ], {
+                        autoAlpha: 0,
+                        y: -50, // Moves up as it disappears
+                        duration: 0.5, // Faster than image for snappy feel
+                        ease: "power2.in",
+                    }, "<")
+
+                    // Show Current Text (Fade In + Move Up from bottom)
+                    .to(textsRef.current[ i ], {
+                        autoAlpha: 1,
+                        y: 0, // Settle to center
+                        duration: 0.7,
+                        ease: "power2.out",
+                    }, "<+=0.2"); // Slight delay so it enters after previous text leaves
             });
 
         }, sectionRef);
@@ -119,54 +119,48 @@ const TryLaunchSection = () => {
     return (
         <section ref={sectionRef} className="bg-black text-white">
             <div ref={triggerRef} className="relative h-screen w-full overflow-hidden">
-                
+
                 {/* --- LEFT SIDE: TEXT CONTENT STACK --- */}
                 {/* We use mix-blend-difference to ensure text is visible on light/dark images */}
-                <div className="absolute inset-0 z-50 flex flex-col justify-center px-[8%] pointer-events-none mix-blend-difference">
-                   
-                   {/* Map through slides to create stacked text layers */}
-                   {slides.map((slide, i) => (
-                       <div 
-                           key={i}
-                           ref={(el) => (textsRef.current[i] = el)}
-                           className="absolute max-w-2xl flex flex-col items-start"
-                       >
-                           {/* Decorative Label */}
-                           <div className="flex items-center gap-4 mb-6 overflow-hidden">
-                                <span className="text-xs font-bold tracking-[0.4em] uppercase text-white/70">
+                <div className="absolute inset-0 z-50 flex flex-col justify-center px-[8%] pointer-events-none">
+
+                    {/* Map through slides to create stacked text layers */}
+                    {/* TEXT */}
+                    <div className="absolute inset-0 z-20 flex items-center px-[8%] pointer-events-none">
+                        {slides.map((slide, i) => (
+                            <div
+                                key={i}
+                                ref={(el) => (textsRef.current[ i ] = el)}
+                                className="absolute max-w-xl"
+                            >
+                                <p className="text-sm tracking-[0.3em] uppercase text-white/80 mb-4">
                                     {slide.subtitle}
-                                </span>
-                                <div className="h-[1px] w-12 bg-white/40"></div>
-                           </div>
+                                </p>
 
-                           {/* Main Title */}
-                           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif tracking-tight mb-6 leading-[0.9]">
-                               {slide.title}
-                           </h1>
+                                <h1 className="text-4xl md:text-6xl font-serif tracking-wide mb-6">
+                                    {slide.title}
+                                </h1>
 
-                           {/* Description */}
-                           <p className="text-sm md:text-base text-white/80 max-w-md font-light leading-relaxed tracking-wide mb-8">
-                               {slide.description}
-                           </p>
+                                <p className="text-white/80 text-sm leading-relaxed mb-8">
+                                    {slide.description}
+                                </p>
 
-                           {/* Button (Only clickable if visible, but we set pointer-events-auto globally on button) */}
-                           <button className="pointer-events-auto group px-8 py-3 border border-white/30 backdrop-blur-sm bg-white/5 overflow-hidden relative">
-                                <span className="relative z-10 text-xs tracking-widest uppercase group-hover:text-black transition-colors duration-500">
-                                    Discover More
-                                </span>
-                                <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                           </button>
-                       </div>
-                   ))}
+                                <button className="pointer-events-auto bg-white/90 text-black px-8 py-3 text-xs tracking-widest uppercase hover:bg-white transition">
+                                    Discover
+                                </button>
+                            </div>
+                        ))}
+                    </div>
 
                 </div>
 
                 {/* --- RIGHT/FULL SIDE: IMAGE STACK --- */}
-                <div className="absolute inset-0 w-full h-full">
+
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent">
                     {slides.map((slide, i) => (
                         <div
                             key={i}
-                            ref={(el) => (imagesRef.current[i] = el)}
+                            ref={(el) => (imagesRef.current[ i ] = el)}
                             className="absolute inset-0 w-full h-full will-change-[clip-path]"
                             style={{ zIndex: i }}
                         >

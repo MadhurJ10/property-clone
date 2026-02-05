@@ -1,4 +1,5 @@
 import React from "react";
+import FAQSection from "./FAQSection";
 
 const WhyInvestSection = () => {
   return (
@@ -86,24 +87,7 @@ const WhyInvestSection = () => {
         </button>
       </div>
 
-      {/* ================= FAQ ================= */}
-      <div className="px-6 md:px-20 py-24 bg-[#fafafa]">
-        {[
-          "Real Estate Developer In Dubai",
-          "Why Choose Danube Properties?",
-          "A Trusted Name in Real Estate",
-          "Investment Opportunities in Dubai",
-          "Danube Properties Impressive Portfolio",
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="border border-gray-300 px-6 py-4 mb-4 flex justify-between items-center"
-          >
-            <span>{item}</span>
-            <span className="text-[#c4ab8c]">↘</span>
-          </div>
-        ))}
-      </div>
+      <FAQSection/>
     </section>
   );
 };

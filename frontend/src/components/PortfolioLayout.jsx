@@ -1,5 +1,5 @@
-import React from "react";
-import LaunchSection from "../pages/LaunchSection";
+import { useParams } from "react-router-dom";
+import { PortfolioProvider, usePortfolio } from "../context/PortfolioContext";
 import TryLaunchSection from "../pages/TryLaunchSection";
 import AmenitiesSection from "./AmenitiesSection";
 import ImageGallery from "./ImageGallery";
@@ -8,101 +8,85 @@ import FAQSection from "./FAQSection";
 import GetInTouch from "./GetInTouch";
 
 const PortfolioLayout = () => {
+  const { slug } = useParams();
+
+  return (
+    <PortfolioProvider slug={slug}>
+      <PortfolioContent />
+    </PortfolioProvider>
+  );
+};
+
+const PortfolioContent = () => {
+  const data = usePortfolio();
+
   return (
     <div className="w-full">
 
-      {/* ================= HERO VIDEO ================= */}
-      <section className="h-screen w-full overflow-hidden">
+      {/* HERO */}
+      <section className="h-screen">
         <video
-          className="w-full h-full object-cover"
-          src="/videos/homevideo.mp4"
+          src={data.heroVideo}
           autoPlay
           muted
           loop
-          playsInline
+          className="w-full h-full object-cover"
         />
       </section>
 
-      {/* ================= INTRO SECTION ================= */}
-      <section className="w-full bg-[#f7f7f7] py-24 px-6 text-center">
-        <h1 className="text-4xl tracking-[0.3em] text-[#b79b75]">
-          SHAHRUKHZ BY DANUBE
+      {/* ================= INTRO ================= */}
+      <section className="bg-[#f7f7f7] pt-32 pb-20 text-center">
+        <h1 className="text-[42px] md:text-5xl tracking-[0.35em] text-[#b79b75]">
+          {data.intro.title}
         </h1>
 
-        <p className="max-w-4xl mx-auto mt-10 text-gray-600 leading-8">
-          Rising on the iconic Sheikh Zayed Road, this premium 55-storey office
-          tower offers unmatched visibility and seamless access in the heart of
-          Dubai.
-          <br /><br />
-          Inspired by the self-made journey of Shahrukh Khan, Shahrukhz is a
-          tribute to those who script their own destiny — a place for business
-          leaders, founders and visionaries to build more than companies, to
-          build empires.
-          <br /><br />
-          With world-class amenities curated for productivity, prestige and
-          wellbeing… every detail elevates the way you work.
-        </p>
+        <div className="max-w-4xl mx-auto mt-14 space-y-8 text-gray-500 text-[17px] leading-8">
+          {data.intro.description
+            .split("\n\n")
+            .map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+        </div>
 
-        <button className="mt-12 px-10 py-4 border border-[#b79b75] text-[#b79b75] tracking-widest hover:bg-[#b79b75] hover:text-white transition">
+        <button className="mt-16 px-12 py-4 bg-[#c4ab8a] text-white tracking-[0.25em] text-sm hover:opacity-90 transition">
           VIRTUAL TOUR
         </button>
       </section>
 
-      {/* ================= STATS GRID ================= */}
-      <section className="w-full bg-[#f7f7f7] px-6 pb-24">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 border border-gray-300">
-          <Stat title="STARTING PRICE" value="AED 1.9 MILLION" />
-          <Stat title="COMPLETION" value="2029" />
-          <Stat title="PAYMENT PLAN" value="PAY 1% MONTHLY" />
-          <Stat title="UNITS" value="615" />
-          <Stat title="COMMERCIAL UNITS" value="EXECUTIVE, PREMIUM, PRESTIGE" />
-          <Stat title="LOCATION" value="SHEIKH ZAYED ROAD, DUBAI" />
-        </div>
-      </section>
 
-      {/* ================= WHY SECTION ================= */}
-      <section className="w-full py-28 text-center">
-        <p className="tracking-widest text-gray-500">WHY?</p>
+      {/* ================= STATS ================= */}
+      <section className="bg-[#f7f7f7] pb-32">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 border-t border-l border-gray-300">
 
-        <h2 className="text-4xl tracking-[0.3em] mt-6 text-[#b79b75]">
-          SHEIKH ZAYED ROAD
-        </h2>
+          {data.stats.map((s, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center justify-center gap-4 px-10 py-16 border-r border-b border-gray-300 text-center"
+            >
+              <p className="text-sm tracking-[0.25em] text-gray-500">
+                {s.title}
+              </p>
 
-        <div className="max-w-6xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 border border-gray-300">
-          <WhyItem text="5 MINS PALM JUMEIRAH" />
-          <WhyItem text="8 MINS DUBAI MARINA" />
-          <WhyItem text="8 MINS MALL OF EMIRATES" />
-          <WhyItem text="20 MINS DUBAI INTERNATIONAL AIRPORT" />
-          <WhyItem text="20 MINS DUBAI EXPO" />
-          <WhyItem text="8 MINS BURJ AL ARAB" />
+              <p className="text-xl tracking-wide text-[#b79b75]">
+                {s.value}
+              </p>
+            </div>
+          ))}
+
         </div>
       </section>
 
 
-      <TryLaunchSection/>
-      <AmenitiesSection/>
-      <ImageGallery/>
-      <LocationMap/>
-      <FAQSection/>
-      <GetInTouch/>
+      {/* GSAP SECTION */}
+      <TryLaunchSection slides={data.launchSlides} />
 
+      <AmenitiesSection items={data.amenities} />
+      <ImageGallery images={data.gallery} />
+      <LocationMap location={data.map.location} />
+      <FAQSection faqs={data.faqs} />
+      <GetInTouch />
     </div>
   );
 };
-
-/* ================= SUB COMPONENTS ================= */
-
-const Stat = ({ title, value }) => (
-  <div className="p-12 border border-gray-300 text-center">
-    <p className="text-sm tracking-widest text-gray-500">{title}</p>
-    <p className="mt-4 text-xl text-[#b79b75]">{value}</p>
-  </div>
-);
-
-const WhyItem = ({ text }) => (
-  <div className="p-12 border border-gray-300 text-center">
-    <p className="tracking-widest text-gray-600 text-sm">{text}</p>
-  </div>
-);
 
 export default PortfolioLayout;

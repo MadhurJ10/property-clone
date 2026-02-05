@@ -1,18 +1,23 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import PortfolioLayout from './components/PortfolioLayout'
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import PortfolioLayout from "./components/PortfolioLayout";
 
 const App = () => {
   return (
-    <div className=''>
-      {/* <h1>dfjsdnfjndjsfnjdsnfjns</h1> */}
-      <Navbar/>
-      {/* <Home/> */}
-      <PortfolioLayout/>
-    </div>
-  )
-}
+    <>
+      <Navbar />
 
-export default App
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        {/* ✅ DYNAMIC PORTFOLIO ROUTE */}
+        <Route path="/portfolio/:slug" element={<PortfolioLayout />} />
+
+      </Routes>
+    </>
+  );
+};
+
+export default App;
