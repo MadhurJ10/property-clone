@@ -1,6 +1,9 @@
 import React from "react";
 import LaunchSection from "../pages/LaunchSection";
 import TryLaunchSection from "../pages/TryLaunchSection";
+import AmenitiesSection from "./AmenitiesSection";
+import ImageGallery from "./ImageGallery";
+import LocationMap from "./LocationMap";
 
 const PortfolioLayout = () => {
   return (
@@ -75,6 +78,9 @@ const PortfolioLayout = () => {
 
 
       <TryLaunchSection/>
+      <AmenitiesSection/>
+      <ImageGallery/>
+      <LocationMap/>
 
     </div>
   );
