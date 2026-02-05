@@ -22,18 +22,54 @@ const Footer = () => {
 
           <div>
             <p className="text-sm mb-2 text-gray-400">FOLLOW US ON:</p>
+
             <div className="flex gap-3">
-              <IconWrapper><FaFacebookF /></IconWrapper>
-              <IconWrapper><FaXTwitter /></IconWrapper>
-              <IconWrapper><FaInstagram /></IconWrapper>
-              <IconWrapper><FaLinkedinIn /></IconWrapper>
-              <IconWrapper><FaYoutube /></IconWrapper>
+              <a
+                href="https://www.facebook.com/bansalgroup/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconWrapper>
+                  <FaFacebookF />
+                </IconWrapper>
+              </a>
+
+              <a
+                href="https://x.com/BansalGroup_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconWrapper>
+                  <FaXTwitter />
+                </IconWrapper>
+              </a>
+
+              <a
+                href="https://www.instagram.com/bansal_group_/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconWrapper>
+                  <FaInstagram />
+                </IconWrapper>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/bansalgroupofficial/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconWrapper>
+                  <FaLinkedinIn />
+                </IconWrapper>
+              </a>
             </div>
           </div>
+
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 text-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-10 text-sm">
 
           <FooterColumn title="ABOUT US" items={[
             "Company Profile",
@@ -91,7 +127,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400">
           <p>
             © {new Date().getFullYear()}{" "}
-            <span className="text-yellow-600">Danube Properties</span>. All Rights
+            <span className="text-yellow-600">Bansal Group</span>. All Rights
             Reserved.
           </p>
 

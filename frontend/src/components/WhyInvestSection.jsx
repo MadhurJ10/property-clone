@@ -1,5 +1,6 @@
 import React from "react";
 import FAQSection from "./FAQSection";
+import founder1 from "../assets/founder1.jpg"
 
 const WhyInvestSection = () => {
   return (
@@ -48,16 +49,16 @@ const WhyInvestSection = () => {
 
           {/* Image Placeholder */}
           <div className="w-full h-[400px] bg-gray-300 flex items-center justify-center text-gray-600">
-            Founder Image
+            <img src={founder1} alt="" />
           </div>
 
           <div>
             <p className="tracking-widest text-sm mb-4">
-              FOUNDER & CHAIRMAN OF DANUBE GROUP
+              Chairman, Bansal Group
             </p>
 
             <h2 className="text-4xl tracking-[0.25em] text-[#c4ab8c] mb-10">
-              RIZWAN SAJAN
+              Shri. Anil Bansal
             </h2>
 
             <button className="px-10 py-4 bg-[#5a5a5a] text-white tracking-wider hover:bg-black transition">

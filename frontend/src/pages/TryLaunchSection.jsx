@@ -2,41 +2,43 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import img4 from "../assets/img4.jpg";
-import img5 from "../assets/img5.jpg";
+import dum1 from "../assets/dum1.jpg";
+import dum2 from "../assets/dum2.jpg";
+import dum3 from "../assets/dum3.jpg";
+import dum4 from "../assets/dum4.jpg";
+import dum5 from "../assets/dum5.jpg";
+import bansalone2 from "../assets/bansalone2.jpg";
+import bansalone from "../assets/bansalone.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
 const slides = [
     {
-        img: img1,
-        title: "SHAHRUKHZ",
+        img: bansalone,
+        title: "BANSAL ONE",
         subtitle: "The Beginning",
         description: "Experience the arrival of a new era in luxury commercial spaces.",
     },
     {
-        img: img2,
+        img: bansalone2,
         title: "THE LOBBY",
         subtitle: "Grand Entrance",
         description: "A triple-height atrium that leaves a lasting impression on every guest.",
     },
     {
-        img: img3,
+        img: dum3,
         title: "SKY LOUNGE",
         subtitle: "Elevated Living",
         description: "Connect and collaborate in spaces designed for the modern visionary.",
     },
     {
-        img: img4,
+        img: dum4,
         title: "WORKSPACE",
         subtitle: "Productivity Redefined",
         description: "Ergonomic designs meeting aesthetic brilliance for peak performance.",
     },
     {
-        img: img5,
+        img: dum5,
         title: "THE VIEW",
         subtitle: "Panoramic Horizons",
         description: "Uninterrupted vistas that inspire your next big idea.",

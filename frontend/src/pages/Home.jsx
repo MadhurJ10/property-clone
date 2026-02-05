@@ -3,42 +3,42 @@ import Footer from "../components/Footer";
 import TryLaunchSection from "./TryLaunchSection";
 import WhyInvestSection from "../components/WhyInvestSection";
 
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import img4 from "../assets/img4.jpg";
-import img5 from "../assets/img5.jpg";
+import dum1 from "../assets/dum1.jpg";
+import dum2 from "../assets/dum2.jpg";
+import dum3 from "../assets/dum3.jpg";
+import dum4 from "../assets/dum4.jpg";
+import dum5 from "../assets/dum5.jpg";
 
 const Home = () => {
 
   // ✅ DATA (correct JS object)
   const launchSlides = [
     {
-      img: img1,
+      img: dum1,
       title: "SHAHRUKHZ",
       subtitle: "The Beginning",
       description: "Experience the arrival of a new era...",
     },
     {
-      img: img2,
+      img: dum2,
       title: "THE LOBBY",
       subtitle: "Grand Entrance",
       description: "A triple-height atrium...",
     },
     {
-      img: img3,
+      img: dum3,
       title: "SKY LOUNGE",
       subtitle: "Elevated Living",
       description: "Connect and collaborate...",
     },
     {
-      img: img4,
+      img: dum4,
       title: "WORKSPACE",
       subtitle: "Productivity Redefined",
       description: "Ergonomic designs...",
     },
     {
-      img: img5,
+      img: dum5,
       title: "THE VIEW",
       subtitle: "Panoramic Horizons",
       description: "Uninterrupted vistas...",

@@ -1,6 +1,7 @@
 import React from "react";
 
-const LocationMap = () => {
+const LocationMap = (item) => {
+  console.log(item.location)
   return (
     <section className="w-full bg-white py-24">
 
@@ -11,7 +12,7 @@ const LocationMap = () => {
           {/* MAP */}
           <iframe
             title="Location Map"
-            src="https://www.google.com/maps?q=ANWA%20BY%20OMNIYAT%20Dubai&output=embed"
+            src={item.location}
             className="w-full h-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

@@ -1,5 +1,5 @@
 import React from "react";
-
+import bansalone from '../assets/bansalone.png';
 
 const GetInTouch = () => {
   return (
@@ -73,7 +73,7 @@ const GetInTouch = () => {
           {/* ================= RIGHT : IMAGE ================= */}
           <div className="hidden lg:block">
             <img
-              src="/images/get-in-touch.jpg"
+              src={bansalone}
               alt="Get in touch"
               className="w-full h-full object-cover"
             />
