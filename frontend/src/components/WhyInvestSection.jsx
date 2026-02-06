@@ -3,6 +3,17 @@ import FAQSection from "./FAQSection";
 import founder1 from "../assets/founder1.jpg"
 
 const WhyInvestSection = () => {
+
+  const faqData = [
+    {
+      q: "When is the expected completion date?",
+      a: "Scheduled for completion in 2029.",
+    },
+    {
+      q: "Where is it located?",
+      a: "Prime location in Bhopal",
+    },
+  ];
   return (
     <section className="w-full bg-white">
 
@@ -88,7 +99,9 @@ const WhyInvestSection = () => {
         </button>
       </div>
 
-      <FAQSection/>
+      <FAQSection  faqs={faqData}
+      title="FREQUENTLY ASKED QUESTIONS"
+      subtitle="MORE INFORMATION"/>
     </section>
   );
 };

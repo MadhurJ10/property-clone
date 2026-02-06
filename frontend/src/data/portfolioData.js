@@ -102,7 +102,7 @@ export const portfolioData = {
       },
       {
         q: "Where is it located?",
-        a: "Prime location in Dubai.",
+        a: "Prime location in Bhopal",
       },
     ],
   },

@@ -34,8 +34,8 @@ const GetInTouch = () => {
               {/* Phone */}
               <div className="flex border">
                 <div className="flex items-center gap-2 px-4 border-r bg-gray-50">
-                  <span>🇦🇪</span>
-                  <span className="text-sm">+971</span>
+                  <span>IN</span>
+                  <span className="text-sm">+91</span>
                 </div>
                 <input
                   type="tel"
@@ -54,9 +54,9 @@ const GetInTouch = () => {
               {/* Budget */}
               <select className="w-full border px-5 py-4 outline-none text-gray-500 focus:border-black">
                 <option>Select a Budget*</option>
-                <option>AED 500k - 1M</option>
-                <option>AED 1M - 2M</option>
-                <option>AED 2M+</option>
+                {/* <option>AED 500k - 1M</option> */}
+                {/* <option>AED 1M - 2M</option> */}
+                {/* <option>AED 2M+</option> */}
               </select>
 
               {/* Button */}
