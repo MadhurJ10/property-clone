@@ -16,8 +16,8 @@ const Footer = () => {
         {/* Logo + Social */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-12">
           <div className="text-2xl font-bold">
-            <span className="text-red-600 italic">DANUBE</span>{" "}
-            <span className="text-white">PROPERTIES</span>
+            <span className="text-red-600 italic">BANSAL</span>{" "}
+            <span className="text-white">GROUP</span>
           </div>
 
           <div>
@@ -88,36 +88,28 @@ const Footer = () => {
             "Completed Projects",
           ]} />
 
-          <FooterColumn title="DANUBE ASSIST" items={[
-            "1% Payment Plan",
-            "Broker Portal",
-          ]} />
 
           <FooterColumn title="MEDIA" items={[
             "News",
             "Video",
             "Blog",
-            "Investment",
-            "Golden Visa",
+            "Investment"
           ]} />
 
           <FooterColumn title="POPULAR AREAS" items={[
-            "Al Furjan",
-            "Arjan",
-            "Business Bay",
-            "Downtown",
-            "Dubai Marina",
-            "JLT",
-            "JVC",
+            "Bhopal",
+            "Shahpura",
+            "Arera Colony",
+            "Habibganj"
           ]} />
 
           <FooterColumn title="RECENT SEARCHES" items={[
-            "Apartments for Sale Dubai",
-            "Studio Apartments Dubai",
-            "1 Bedroom Apartments Dubai",
-            "2 Bedroom Apartments Dubai",
-            "Villas for Sale Dubai",
-            "Penthouses Dubai",
+            "Office for Sale Bhopal",
+            "Studio Apartments Bhopal",
+            "1 Bedroom Apartments Bhopal",
+            "2 Bedroom Apartments Bhopal",
+            "Villas for Sale Bhopal",
+            "Penthouses Bhopal",
           ]} />
         </div>
       </div>

@@ -98,7 +98,7 @@ const Home = () => {
       <TryLaunchSection slides={launchSlides} />
 
       <WhyInvestSection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

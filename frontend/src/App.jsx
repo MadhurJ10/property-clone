@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import PortfolioLayout from "./components/PortfolioLayout";
 import About from "./pages/About"
 import LeadershipTeam from "./pages/LeadershipTeam";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/portfolio/:slug" element={<PortfolioLayout />} />
 
       </Routes>
+      <Footer/>
     </>
   );
 };

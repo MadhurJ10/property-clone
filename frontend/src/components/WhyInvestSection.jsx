@@ -25,7 +25,7 @@ const WhyInvestSection = () => {
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-300" />
 
           <WhyBlock
-            title="DANUBE PROPERTIES?"
+            title="BANSAL PROPERTIES?"
             items={[
               "0% INTEREST",
               "1% PER MONTH",
@@ -39,7 +39,7 @@ const WhyInvestSection = () => {
           />
 
           <WhyBlock
-            title="INVEST IN DUBAI?"
+            title="INVEST IN BHOPAL?"
             items={[
               "SAFEST CITY IN THE WORLD",
               "FASTEST GROWING ECONOMY",
