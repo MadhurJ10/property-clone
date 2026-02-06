@@ -6,6 +6,7 @@ import PortfolioLayout from "./components/PortfolioLayout";
 import About from "./pages/About"
 import LeadershipTeam from "./pages/LeadershipTeam";
 import Footer from "./components/Footer";
+import News from "./pages/News";
 
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/leadership" element={<LeadershipTeam />} />
-
+        <Route path="/news" element={<News />} />
 
         {/* ✅ DYNAMIC PORTFOLIO ROUTE */}
         <Route path="/portfolio/:slug" element={<PortfolioLayout />} />
