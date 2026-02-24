@@ -3,45 +3,40 @@ import Footer from "../components/Footer";
 import TryLaunchSection from "./TryLaunchSection";
 import WhyInvestSection from "../components/WhyInvestSection";
 
-import dum1 from "../assets/dum1.jpg";
-import dum2 from "../assets/dum2.jpg";
-import dum3 from "../assets/dum3.jpg";
-import dum4 from "../assets/dum4.jpg";
-import dum5 from "../assets/dum5.jpg";
 
 const Home = () => {
 
   // ✅ DATA (correct JS object)
   const launchSlides = [
     {
-      img: dum1,
+      img: "/images/Lotus_Valley_Image_1.png",
       title: "SHAHRUKHZ",
       subtitle: "The Beginning",
-      description: "Experience the arrival of a new era...",
+      description: "Experience the arrival of a new era in luxury living at Lotus Valley.",
     },
     {
-      img: dum2,
+      img: "/images/Lotus_Valley_Image_25.png",
       title: "THE LOBBY",
       subtitle: "Grand Entrance",
-      description: "A triple-height atrium...",
+      description: "A triple-height atrium that leaves a lasting impression on every guest.",
     },
     {
-      img: dum3,
+      img: "/images/Lotus_Valley_Image_26.png",
       title: "SKY LOUNGE",
       subtitle: "Elevated Living",
-      description: "Connect and collaborate...",
+      description: "Connect and collaborate in spaces designed for the modern visionary.",
     },
     {
-      img: dum4,
+      img: "/images/Lotus_Valley_Image_29.png",
       title: "WORKSPACE",
       subtitle: "Productivity Redefined",
-      description: "Ergonomic designs...",
+      description: "Ergonomic designs meeting aesthetic brilliance for peak performance.",
     },
     {
-      img: dum5,
+      img: "/images/Lotus_Valley_Image_27.png",
       title: "THE VIEW",
       subtitle: "Panoramic Horizons",
-      description: "Uninterrupted vistas...",
+      description: "Uninterrupted vistas that inspire your next big idea.",
     },
   ];
 
@@ -52,7 +47,7 @@ const Home = () => {
       <section className="h-screen w-full overflow-hidden">
         <img
           className="w-full h-full object-cover"
-          src="/image.png"
+          src="/images/Lotus_Valley_Image_14.png"
           alt="Lotus Valley Hero"
         />
       </section>

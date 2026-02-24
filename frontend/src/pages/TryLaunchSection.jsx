@@ -2,50 +2,43 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import dum1 from "../assets/dum1.jpg";
-import dum2 from "../assets/dum2.jpg";
-import dum3 from "../assets/dum3.jpg";
-import dum4 from "../assets/dum4.jpg";
-import dum5 from "../assets/dum5.jpg";
-import bansalone2 from "../assets/bansalone2.jpg";
-import bansalone from "../assets/bansalone.png"
-
 gsap.registerPlugin(ScrollTrigger);
 
 const slides = [
     {
-        img: bansalone,
+        img: "/images/Lotus_Valley_Image_11.png",
         title: "BANSAL ONE",
         subtitle: "The Beginning",
         description: "Experience the arrival of a new era in luxury commercial spaces.",
     },
     {
-        img: bansalone2,
+        img: "/images/Lotus_Valley_Image_25.png",
         title: "THE LOBBY",
         subtitle: "Grand Entrance",
         description: "A triple-height atrium that leaves a lasting impression on every guest.",
     },
     {
-        img: dum3,
+        img: "/images/Lotus_Valley_Image_26.png",
         title: "SKY LOUNGE",
         subtitle: "Elevated Living",
         description: "Connect and collaborate in spaces designed for the modern visionary.",
     },
     {
-        img: dum4,
+        img: "/images/Lotus_Valley_Image_29.png",
         title: "WORKSPACE",
         subtitle: "Productivity Redefined",
         description: "Ergonomic designs meeting aesthetic brilliance for peak performance.",
     },
     {
-        img: dum5,
+        img: "/images/Lotus_Valley_Image_27.png",
         title: "THE VIEW",
         subtitle: "Panoramic Horizons",
         description: "Uninterrupted vistas that inspire your next big idea.",
     },
 ];
 
-const TryLaunchSection = () => {
+const TryLaunchSection = ({ slides: propSlides }) => {
+    const displaySlides = propSlides || slides;
     const sectionRef = useRef(null);
     const triggerRef = useRef(null);
 
@@ -67,29 +60,29 @@ const TryLaunchSection = () => {
 
             // Initial setup: Hide all texts except the first one
             // We push other texts down and make them invisible
-            slides.forEach((_, i) => {
+            displaySlides.forEach((_, i) => {
                 if (i !== 0) {
-                    gsap.set(textsRef.current[ i ], { autoAlpha: 0, y: 50 });
+                    gsap.set(textsRef.current[i], { autoAlpha: 0, y: 50 });
                 }
             });
 
             // Loop through slides starting from the second one (index 1)
-            slides.forEach((_, i) => {
+            displaySlides.forEach((_, i) => {
                 if (i === 0) return;
 
                 // 1. ANIMATE IMAGE REVEAL (Curtain Effect)
                 // Set initial clipped state
-                gsap.set(imagesRef.current[ i ], { clipPath: "inset(100% 0% 0% 0%)" });
+                gsap.set(imagesRef.current[i], { clipPath: "inset(100% 0% 0% 0%)" });
 
                 // Add to timeline
-                tl.to(imagesRef.current[ i ], {
+                tl.to(imagesRef.current[i], {
                     clipPath: "inset(0% 0% 0% 0%)",
                     duration: 1,
                     ease: "none",
                 })
 
                     // 2. PARALLAX EFFECT FOR IMAGE (Subtle Zoom)
-                    .fromTo(imagesRef.current[ i ].querySelector("img"),
+                    .fromTo(imagesRef.current[i].querySelector("img"),
                         { scale: 1.3, yPercent: -10 },
                         { scale: 1, yPercent: 0, duration: 1, ease: "power1.out" },
                         "<"
@@ -97,7 +90,7 @@ const TryLaunchSection = () => {
 
                     // 3. TEXT TRANSITION
                     // Hide Previous Text (Fade Out + Move Up)
-                    .to(textsRef.current[ i - 1 ], {
+                    .to(textsRef.current[i - 1], {
                         autoAlpha: 0,
                         y: -50, // Moves up as it disappears
                         duration: 0.5, // Faster than image for snappy feel
@@ -105,7 +98,7 @@ const TryLaunchSection = () => {
                     }, "<")
 
                     // Show Current Text (Fade In + Move Up from bottom)
-                    .to(textsRef.current[ i ], {
+                    .to(textsRef.current[i], {
                         autoAlpha: 1,
                         y: 0, // Settle to center
                         duration: 0.7,
@@ -129,10 +122,10 @@ const TryLaunchSection = () => {
                     {/* Map through slides to create stacked text layers */}
                     {/* TEXT */}
                     <div className="absolute inset-0 z-20 flex items-center px-[8%] pointer-events-none">
-                        {slides.map((slide, i) => (
+                        {displaySlides.map((slide, i) => (
                             <div
                                 key={i}
-                                ref={(el) => (textsRef.current[ i ] = el)}
+                                ref={(el) => (textsRef.current[i] = el)}
                                 className="absolute max-w-xl"
                             >
                                 <p className="text-sm tracking-[0.3em] uppercase text-white/80 mb-4">
@@ -159,10 +152,10 @@ const TryLaunchSection = () => {
                 {/* --- RIGHT/FULL SIDE: IMAGE STACK --- */}
 
                 <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent">
-                    {slides.map((slide, i) => (
+                    {displaySlides.map((slide, i) => (
                         <div
                             key={i}
-                            ref={(el) => (imagesRef.current[ i ] = el)}
+                            ref={(el) => (imagesRef.current[i] = el)}
                             className="absolute inset-0 w-full h-full will-change-[clip-path]"
                             style={{ zIndex: i }}
                         >
