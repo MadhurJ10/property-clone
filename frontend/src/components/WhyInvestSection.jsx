@@ -8,46 +8,46 @@ const WhyInvestSection = () => {
 
       {/* ================= WHY SECTION ================= */}
       <div className="relative px-6 md:px-20 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-
-          {/* Divider */}
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-300" />
+        <div className="flex flex-col gap-24">
 
           <WhyBlock
             title="LOTUS VALLEY?"
             items={[
-              "0% INTEREST",
-              "1% PER MONTH",
-              "80 MONTHS PAYMENT PLAN",
-              "HIGH RETURN ON INVESTMENT",
-              "TIMELY DELIVERY",
-              "PRIME LOCATIONS",
-              "LUXURY FURNISHING",
-              "40+ AMENITIES",
+              { title: "Riverside Living", desc: "Premium river-facing plots in a serene green environment." },
+              { title: "Prime Location", desc: "0.2 km from Billabong School | 4 km from Sage University | 10 km from AIIMS." },
+              { title: "Smart & Secure Community", desc: "24x7 CCTV Security, Smart Gate System & Wi-Fi Enabled Campus." },
+              { title: "Master-Planned Layout", desc: "Thoughtfully designed layout blending nature with modern infrastructure." },
+              { title: "Modern Amenities", desc: "Clubhouse, Banquet Hall, Jogging Park & Children’s Play Area." },
+              { title: "Peaceful Yet Connected", desc: "Close to Capital Mall, Ashima Mall & Bhopal Airport." },
+              { title: "Green Lifestyle", desc: "Abundant open spaces, landscaped gardens & healthy surroundings." },
+              { title: "High Growth Potential", desc: "Strategic location with strong future development prospects." },
             ]}
           />
 
+          {/* Luxury Divider */}
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+
           <WhyBlock
-            title="INVEST IN DUBAI?"
+            title="INVEST?"
             items={[
-              "SAFEST CITY IN THE WORLD",
-              "FASTEST GROWING ECONOMY",
-              "HIGH CAPITAL APPRECIATION",
-              "EASE OF INVESTMENT",
-              "FREEHOLD OWNERSHIP",
-              "100% TAX FREE INCOME",
-              "LONG-TERM GOLDEN VISA",
-              "WORLDWIDE CONNECTIVITY",
+              { title: "River-Side Rarity", desc: "Limited premium river-facing plots with long-term value." },
+              { title: "High Appreciation Zone", desc: "Located in one of Bhopal’s rapidly developing corridors." },
+              { title: "Smart Infrastructure", desc: "Secure gated community with modern facilities." },
+              { title: "Strong Rental Potential", desc: "Close to universities, AIIMS & commercial hubs." },
+              { title: "Safe & Peaceful Living", desc: "Designed for families, health, and community life." },
+              { title: "Lifestyle Investment", desc: "A home that offers wellness, celebration & recreation." },
+              { title: "Connectivity Advantage", desc: "Easy access to major city landmarks and transport hubs." },
+              { title: "Future-Ready Community", desc: "Planned to foster Community, Health & Celebration." },
             ]}
           />
         </div>
       </div>
 
-      {/* ================= FOUNDER SECTION ================= */}
+      {/* ================= FOUNDER SECTION commented out ================= */}
+      {/* 
       <div className="px-6 md:px-20 py-24 bg-[#fafafa]">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
 
-          {/* Image Placeholder */}
           <div className="w-full h-[400px] bg-gray-300 flex items-center justify-center text-gray-600">
             <img src={founder1} alt="" />
           </div>
@@ -67,6 +67,7 @@ const WhyInvestSection = () => {
           </div>
         </div>
       </div>
+      */}
 
       {/* ================= BLOGS ================= */}
       <div className="px-6 md:px-20 py-24 text-center">
@@ -77,16 +78,33 @@ const WhyInvestSection = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <BlogCard date="22 Dec, 2025" />
-          <BlogCard date="19 Nov, 2025" />
-          <BlogCard date="18 Nov, 2025" />
-          <BlogCard date="23 Sep, 2025" />
+          <BlogCard
+            date="22 Dec, 2025"
+            img="/images/Lotus_Valley_Image_11.png"
+            title="CONSTRUCTION MILESTONE"
+            content="Lotus Valley One project reaches a new milestone in construction excellence with the completion of the main structure."
+          />
+          <BlogCard
+            date="19 Nov, 2025"
+            img="/images/Lotus_Valley_Image_12.png"
+            title="MARKET TRENDS"
+            content="How prime locations are driving record-breaking real estate growth and investment opportunities in the heart of the city."
+          />
+          <BlogCard
+            date="18 Nov, 2025"
+            img="/images/Lotus_Valley_Image_34.png"
+            title="AVANT-GARDE DESIGN"
+            content="Experience the future of community living with our iconic clubhouse, featuring bold architectural curves and integrated green landscapes."
+          />
+          <BlogCard
+            date="23 Sep, 2025"
+            img="/images/Lotus_Valley_Image_15.png"
+            title="LUXURY AMENITIES"
+            content="An exclusive preview of the world-class recreational facilities and clubhouses coming soon to the Lotus Valley community."
+          />
         </div>
 
-        <button className="mt-16 px-14 py-4 bg-[#c4ab8c] text-white tracking-wider hover:opacity-90 transition">
-          VIEW MORE
-        </button>
-      </div>
+              </div>
 
       <FAQSection />
     </section>
@@ -103,26 +121,39 @@ const WhyBlock = ({ title, items }) => (
       {title}
     </h2>
 
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-y-14 text-center text-sm">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12 text-center">
       {items.map((item, i) => (
-        <div key={i} className="opacity-80">
-          {item}
+        <div key={i} className="flex flex-col items-center">
+          <h3 className="text-[#5a5a5a] font-semibold tracking-wider mb-3 text-sm uppercase">
+            {item.title}
+          </h3>
+          <p className="text-xs leading-relaxed opacity-70 max-w-[200px]">
+            {item.desc}
+          </p>
         </div>
       ))}
     </div>
   </div>
 );
 
-const BlogCard = ({ date }) => (
-  <div className="text-left">
-    {/* Image Placeholder */}
-    <div className="w-full h-48 bg-gray-300 flex items-center justify-center text-gray-600 mb-4">
-      Blog Image
+const BlogCard = ({ date, img, title, content, imgStyle = {} }) => (
+  <div className="text-left group cursor-pointer">
+    {/* Image Container */}
+    <div className="w-full h-48 overflow-hidden mb-4 bg-gray-100">
+      <img
+        src={img}
+        alt={title}
+        style={imgStyle}
+        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+      />
     </div>
 
-    <p className="text-sm opacity-70 mb-2">{date}</p>
-    <p className="text-sm">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <p className="text-[10px] tracking-widest opacity-60 mb-2 uppercase">{date}</p>
+    <h3 className="text-sm font-semibold tracking-wider mb-2 text-[#5a5a5a] group-hover:text-[#c4ab8c] transition">
+      {title}
+    </h3>
+    <p className="text-xs leading-relaxed opacity-70 line-clamp-3">
+      {content}
     </p>
   </div>
 );

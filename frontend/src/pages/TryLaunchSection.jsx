@@ -139,10 +139,6 @@ const TryLaunchSection = ({ slides: propSlides }) => {
                                 <p className="text-white/80 text-sm leading-relaxed mb-8">
                                     {slide.description}
                                 </p>
-
-                                <button className="pointer-events-auto bg-white/90 text-black px-8 py-3 text-xs tracking-widest uppercase hover:bg-white transition">
-                                    Discover
-                                </button>
                             </div>
                         ))}
                     </div>

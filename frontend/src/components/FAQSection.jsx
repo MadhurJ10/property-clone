@@ -5,19 +5,19 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "When is the expected completion date for Breez by Danube?",
+      question: "When is the expected completion date for Lotus Valley?",
       answer:
-        "Breez by Danube is scheduled for completion and handover in 2029.",
+        "Lotus Valley is a meticulously planned community designed to foster Community, Health, and Celebration. For construction timelines and possession details, please contact ECOSTAR INFRA to book your exclusive site visit.",
     },
     {
-      question: "Where is Breez by Danube located?",
+      question: "Where is Lotus Valley located?",
       answer:
-        "Breez by Danube is located in a prime area of Dubai, offering excellent connectivity and accessibility.",
+        "Lotus Valley is located in the heart of Bhopal, offering a rare riverside setting. The project is strategically positioned close to:\n\n0.2 km from Billabong School\n\n4 km from Sage University\n\n10 km from AIIMS Medical College & Hospital\n\n7 km from Capital Mall\n\n8 km from Ashima Mall\n\n25 km from Bhopal Airport\n\nIt combines the tranquility of the river with the convenience of the city.",
     },
     {
-      question: "What makes Breez by Danube unique?",
+      question: "What makes Lotus Valley unique?",
       answer:
-        "Breez by Danube offers premium amenities, strategic location, and thoughtfully designed spaces curated for modern living.",
+        "Lotus Valley stands out for its:\n\nPremium river-facing plots\n\nSmart & Secure Community with 24x7 CCTV\n\nSmart Gate System & Wi-Fi coverage\n\nCentral Clubhouse with Banquet Hall\n\nDedicated Jogging Park & Green Spaces\n\nSecure Children's Play Area\n\nMaster-planned layout blending nature with modern living\n\nIt is designed to offer a peaceful, green lifestyle with modern amenities.",
     },
   ];
 

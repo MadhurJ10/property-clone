@@ -50,9 +50,9 @@ const LaunchSection = () => {
 
             // Initial states
             gsap.set(images, { yPercent: 100, scale: 1.05 });
-            gsap.set(images[ 0 ], { yPercent: 0, scale: 1 });
+            gsap.set(images[0], { yPercent: 0, scale: 1 });
             gsap.set(texts, { autoAlpha: 0, y: 20 });
-            gsap.set(texts[ 0 ], { autoAlpha: 1, y: 0 });
+            gsap.set(texts[0], { autoAlpha: 1, y: 0 });
 
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -74,7 +74,7 @@ const LaunchSection = () => {
 
                 // IMAGE comes in EARLIER and smoother
                 tl.to(
-                    images[ i ],
+                    images[i],
                     {
                         yPercent: 0,
                         scale: 1,
@@ -86,7 +86,7 @@ const LaunchSection = () => {
 
                 // Previous image subtly moves up
                 tl.to(
-                    images[ i - 1 ],
+                    images[i - 1],
                     {
                         scale: 0.98,
                         ease: "power2.out",
@@ -97,7 +97,7 @@ const LaunchSection = () => {
 
                 // TEXT out
                 tl.to(
-                    texts[ i - 1 ],
+                    texts[i - 1],
                     {
                         autoAlpha: 0,
                         y: -20,
@@ -109,7 +109,7 @@ const LaunchSection = () => {
 
                 // TEXT in
                 tl.to(
-                    texts[ i ],
+                    texts[i],
                     {
                         autoAlpha: 1,
                         y: 0,
@@ -134,7 +134,7 @@ const LaunchSection = () => {
                 {slides.map((slide, i) => (
                     <div
                         key={i}
-                        ref={(el) => (textPanelsRef.current[ i ] = el)}
+                        ref={(el) => (textPanelsRef.current[i] = el)}
                         className="absolute left-[8%] top-[38%] max-w-xl text-left"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl tracking-[0.22em] text-[#c4ab8c] mb-6">
@@ -144,10 +144,6 @@ const LaunchSection = () => {
                         <h2 className="text-white tracking-widest mb-10">
                             {slide.subtitle}
                         </h2>
-
-                        <button className="pointer-events-auto px-10 py-4 bg-[#5a5a5a] text-white tracking-wider hover:bg-black transition">
-                            DISCOVER ↗
-                        </button>
                     </div>
                 ))}
             </div>
@@ -157,7 +153,7 @@ const LaunchSection = () => {
                 {slides.map((slide, i) => (
                     <div
                         key={i}
-                        ref={(el) => (imagePanelsRef.current[ i ] = el)}
+                        ref={(el) => (imagePanelsRef.current[i] = el)}
                         className="absolute inset-0 h-full w-full"
                         style={{ zIndex: i }}
                     >

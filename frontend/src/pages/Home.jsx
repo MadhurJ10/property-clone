@@ -10,33 +10,33 @@ const Home = () => {
   const launchSlides = [
     {
       img: "/images/Lotus_Valley_Image_1.png",
-      title: "SHAHRUKHZ",
-      subtitle: "The Beginning",
-      description: "Experience the arrival of a new era in luxury living at Lotus Valley.",
+      title: "SERENE SPACES",
+      subtitle: "NATURE'S RETREAT",
+      description: "Find tranquility amidst lush landscapes and soothing water features designed for ultimate relaxation.",
     },
     {
       img: "/images/Lotus_Valley_Image_25.png",
-      title: "THE LOBBY",
-      subtitle: "Grand Entrance",
-      description: "A triple-height atrium that leaves a lasting impression on every guest.",
+      title: "RECREATION HUB",
+      subtitle: "LEISURE & FUN",
+      description: "Unwind and socialize in our world-class entertainment and gaming zones tailored for all ages.",
     },
     {
       img: "/images/Lotus_Valley_Image_26.png",
-      title: "SKY LOUNGE",
-      subtitle: "Elevated Living",
-      description: "Connect and collaborate in spaces designed for the modern visionary.",
+      title: "ELITE BANQUETS",
+      subtitle: "GRAND CELEBRATIONS",
+      description: "Host unforgettable events in our sophisticated and elegantly designed banquet spaces.",
     },
     {
       img: "/images/Lotus_Valley_Image_29.png",
-      title: "WORKSPACE",
-      subtitle: "Productivity Redefined",
-      description: "Ergonomic designs meeting aesthetic brilliance for peak performance.",
+      title: "MODERN LIVING",
+      subtitle: "AESTHETIC DESIGNS",
+      description: "Experience architectural brilliance with ergonomic designs tailored for luxury and comfort.",
     },
     {
       img: "/images/Lotus_Valley_Image_27.png",
-      title: "THE VIEW",
-      subtitle: "Panoramic Horizons",
-      description: "Uninterrupted vistas that inspire your next big idea.",
+      title: "PARKSIDE VISTAS",
+      subtitle: "OPEN AIR ART",
+      description: "Enjoy breathtaking views and artistic installations in our expansive community parks.",
     },
   ];
 
@@ -47,7 +47,7 @@ const Home = () => {
       <section className="h-screen w-full overflow-hidden">
         <img
           className="w-full h-full object-cover"
-          src="/images/Lotus_Valley_Image_14.png"
+          src="/images/Lotus_Valley_Image_34.png"
           alt="Lotus Valley Hero"
         />
       </section>
@@ -65,10 +65,6 @@ const Home = () => {
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="px-10 py-4 bg-[#5a5a5a] text-white tracking-wider hover:bg-black transition">
-              ↗ DISCOVER
-            </button>
-
             <button className="px-10 py-4 bg-[#c4ab8c] text-white tracking-wider hover:bg-[#b89c7a] transition">
               REGISTER INTEREST
             </button>

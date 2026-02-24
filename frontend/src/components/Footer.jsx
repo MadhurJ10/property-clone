@@ -71,41 +71,46 @@ const Footer = () => {
         {/* Links Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-10 text-sm">
 
-          <FooterColumn title="ABOUT US" items={[
-            { label: "Company Profile", to: "/about" },
-            { label: "Leadership Team", to: "/leadership" },
-            { label: "Our Journey", to: "/our-journey" },
-            { label: "Contact", to: "/contact" },
+          <FooterColumn title="ABOUT LOTUS VALLEY" items={[
+            { label: "Overview", to: "/about#overview" },
+            { label: "Vision", to: "/about#vision" },
+            { label: "Mission", to: "/about#mission" },
+            { label: "Team", to: "/about#team" },
           ]} />
 
-          <FooterColumn title="PROJECTS" items={[
-            { label: "All Projects", to: "/projects" },
-            { label: "Latest Launches", to: "/projects" },
-            { label: "Ongoing Projects", to: "/projects" },
-            { label: "Completed Projects", to: "/projects" },
+          <FooterColumn title="PROJECT HIGHLIGHTS" items={[
+            { label: "River-Facing Plots", to: "/highlights" },
+            { label: "Premium Location", to: "/location" },
+            { label: "Master Plan", to: "/master-plan" },
+            { label: "Gallery", to: "/gallery" },
           ]} />
 
-          <FooterColumn title="MEDIA" items={[
-            { label: "News", to: "/media" },
-            { label: "Video", to: "/media" },
-            { label: "Blog", to: "/media" },
+          <FooterColumn title="AMENITIES" items={[
+            { label: "Clubhouse", to: "/amenities" },
+            { label: "Jogging Park", to: "/amenities" },
+            { label: "Children's Play Area", to: "/amenities" },
+            { label: "Banquet Hall", to: "/amenities" },
           ]} />
 
-
-          <FooterColumn title="POPULAR AREAS" items={[
-            { label: "Al Furjan", to: "#" },
-            { label: "Arjan", to: "#" },
-            { label: "Business Bay", to: "#" },
-            { label: "Downtown", to: "#" },
-            { label: "Dubai Marina", to: "#" },
-            { label: "JLT", to: "#" },
-            { label: "JVC", to: "#" },
+          <FooterColumn title="LOCATION ADVANTAGE" items={[
+            { label: "Nearby Schools", to: "/location" },
+            { label: "Hospitals", to: "/location" },
+            { label: "Shopping Malls", to: "/location" },
+            { label: "Airport Connectivity", to: "/location" },
           ]} />
 
-          <FooterColumn title="RECENT SEARCHES" items={[
-            { label: "Apartments for Sale Dubai", to: "#" },
-            { label: "Studio Apartments Dubai", to: "#" },
-            { label: "Villas for Sale Dubai", to: "#" },
+          <FooterColumn title="SMART FEATURES" items={[
+            { label: "24x7 CCTV Security", to: "/features" },
+            { label: "Smart Gate System", to: "/features" },
+            { label: "Wi-Fi Enabled Campus", to: "/features" },
+            { label: "Modern Infrastructure", to: "/features" },
+          ]} />
+
+          <FooterColumn title="COMMUNITY LIFESTYLE" items={[
+            { label: "Green Living", to: "/lifestyle" },
+            { label: "Recreation", to: "/lifestyle" },
+            { label: "Health & Wellness", to: "/lifestyle" },
+            { label: "Community Events", to: "/lifestyle" },
           ]} />
         </div>
       </div>
