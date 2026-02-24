@@ -1,10 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaXTwitter,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
 } from "react-icons/fa6";
 
 const Footer = () => {
@@ -72,52 +72,40 @@ const Footer = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-10 text-sm">
 
           <FooterColumn title="ABOUT US" items={[
-            "Company Profile",
-            "Founders Message",
-            "Leadership Team",
-            "Management Team",
-            "Our Journey",
-            "Careers",
-            "Sitemap",
-            "Contact",
+            { label: "Company Profile", to: "/about" },
+            { label: "Leadership Team", to: "/leadership" },
+            { label: "Our Journey", to: "/our-journey" },
+            { label: "Contact", to: "/contact" },
           ]} />
 
           <FooterColumn title="PROJECTS" items={[
-            "Latest Launches",
-            "Ongoing Projects",
-            "Completed Projects",
-          ]} />
-
-          <FooterColumn title="DANUBE ASSIST" items={[
-            "1% Payment Plan",
-            "Broker Portal",
+            { label: "All Projects", to: "/projects" },
+            { label: "Latest Launches", to: "/projects" },
+            { label: "Ongoing Projects", to: "/projects" },
+            { label: "Completed Projects", to: "/projects" },
           ]} />
 
           <FooterColumn title="MEDIA" items={[
-            "News",
-            "Video",
-            "Blog",
-            "Investment",
-            "Golden Visa",
+            { label: "News", to: "/media" },
+            { label: "Video", to: "/media" },
+            { label: "Blog", to: "/media" },
           ]} />
 
+
           <FooterColumn title="POPULAR AREAS" items={[
-            "Al Furjan",
-            "Arjan",
-            "Business Bay",
-            "Downtown",
-            "Dubai Marina",
-            "JLT",
-            "JVC",
+            { label: "Al Furjan", to: "#" },
+            { label: "Arjan", to: "#" },
+            { label: "Business Bay", to: "#" },
+            { label: "Downtown", to: "#" },
+            { label: "Dubai Marina", to: "#" },
+            { label: "JLT", to: "#" },
+            { label: "JVC", to: "#" },
           ]} />
 
           <FooterColumn title="RECENT SEARCHES" items={[
-            "Apartments for Sale Dubai",
-            "Studio Apartments Dubai",
-            "1 Bedroom Apartments Dubai",
-            "2 Bedroom Apartments Dubai",
-            "Villas for Sale Dubai",
-            "Penthouses Dubai",
+            { label: "Apartments for Sale Dubai", to: "#" },
+            { label: "Studio Apartments Dubai", to: "#" },
+            { label: "Villas for Sale Dubai", to: "#" },
           ]} />
         </div>
       </div>
@@ -127,7 +115,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400">
           <p>
             © {new Date().getFullYear()}{" "}
-            <span className="text-yellow-600">Bansal Group</span>. All Rights
+            <span className="text-yellow-600">Lotus Valley</span>. All Rights
             Reserved.
           </p>
 
@@ -151,11 +139,16 @@ const FooterColumn = ({ title, items }) => (
     <h4 className="text-white font-semibold mb-4">{title}</h4>
     <ul className="space-y-2">
       {items.map((item, i) => (
-        <li
-          key={i}
-          className="hover:text-white cursor-pointer transition"
-        >
-          {item}
+        <li key={i}>
+          {item.to !== "#" ? (
+            <Link to={item.to} className="hover:text-white cursor-pointer transition">
+              {item.label}
+            </Link>
+          ) : (
+            <span className="hover:text-white cursor-pointer transition">
+              {item.label}
+            </span>
+          )}
         </li>
       ))}
     </ul>
@@ -169,3 +162,4 @@ const IconWrapper = ({ children }) => (
 );
 
 export default Footer;
+

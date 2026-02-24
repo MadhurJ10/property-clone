@@ -14,7 +14,7 @@ const WhyInvestSection = () => {
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-300" />
 
           <WhyBlock
-            title="DANUBE PROPERTIES?"
+            title="LOTUS VALLEY?"
             items={[
               "0% INTEREST",
               "1% PER MONTH",
@@ -54,7 +54,7 @@ const WhyInvestSection = () => {
 
           <div>
             <p className="tracking-widest text-sm mb-4">
-              Chairman, Bansal Group
+              Chairman, Lotus Valley
             </p>
 
             <h2 className="text-4xl tracking-[0.25em] text-[#c4ab8c] mb-10">
@@ -88,7 +88,7 @@ const WhyInvestSection = () => {
         </button>
       </div>
 
-      <FAQSection/>
+      <FAQSection />
     </section>
   );
 };

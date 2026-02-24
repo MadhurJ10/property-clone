@@ -48,15 +48,12 @@ const Home = () => {
   return (
     <div className="w-full">
 
-      {/* HERO VIDEO */}
+      {/* HERO IMAGE */}
       <section className="h-screen w-full overflow-hidden">
-        <video
+        <img
           className="w-full h-full object-cover"
-          src="/videos/homevideo.webm"
-          autoPlay
-          muted
-          loop
-          playsInline
+          src="/image.png"
+          alt="Lotus Valley Hero"
         />
       </section>
 
@@ -69,7 +66,7 @@ const Home = () => {
           </h2>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.25em] text-[#c4ab8c] mb-14">
-            BANSAL ONE
+            LOTUS VALLEY ONE
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -98,6 +95,8 @@ const Home = () => {
       <TryLaunchSection slides={launchSlides} />
 
       <WhyInvestSection />
+
+
       <Footer />
     </div>
   );

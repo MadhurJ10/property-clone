@@ -7,6 +7,11 @@ import About from "./pages/About"
 import LeadershipTeam from "./pages/LeadershipTeam";
 
 
+import Media from "./pages/Media";
+import Contact from "./pages/Contact";
+import OurJourney from "./pages/OurJourney";
+import ProjectsGallery from "./pages/ProjectsGallery";
+
 const App = () => {
   return (
     <>
@@ -16,7 +21,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/leadership" element={<LeadershipTeam />} />
-
+        <Route path="/our-journey" element={<OurJourney />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<ProjectsGallery />} />
 
         {/* ✅ DYNAMIC PORTFOLIO ROUTE */}
         <Route path="/portfolio/:slug" element={<PortfolioLayout />} />
@@ -25,5 +33,6 @@ const App = () => {
     </>
   );
 };
+
 
 export default App;

@@ -22,8 +22,8 @@ export const portfolioData = {
     heroVideo: "/videos/homevideo.webm",
 
     intro: {
-      title: "BANSAL ONE",
-      description: `Bansal One aspires to be the best corporate and commercial property in Bhopal, with luxurious, state-of-the-art infrastructure and spaces for offices and dining services. Founded by visionary entrepreneurs Anil Bansal and Sunil Bansal and brought to life under the leadership of CEO Avnish Hasija, Bansal One is a magnificent 16-storey tower designed to impress and inspire. Spanning 4 lakh sqft, Bansal One showcases safety and environmental responsibility through earthquake resistance structures, advanced fire safety measures, 3-tier security, and a sustainability certificate by ASSOCHAM with a GEM 3 rating.`,
+      title: "LOTUS VALLEY ONE",
+      description: `Lotus Valley One aspires to be the best corporate and commercial property in Bhopal, with luxurious, state-of-the-art infrastructure and spaces for offices and dining services. Founded by visionary entrepreneurs Anil Bansal and Sunil Bansal and brought to life under the leadership of CEO Avnish Hasija, Lotus Valley One is a magnificent 16-storey tower designed to impress and inspire. Spanning 4 lakh sqft, Lotus Valley One showcases safety and environmental responsibility through earthquake resistance structures, advanced fire safety measures, 3-tier security, and a sustainability certificate by ASSOCHAM with a GEM 3 rating.`,
     },
 
     stats: [
@@ -204,10 +204,10 @@ Inspired by the self-made journey of Shahrukh Khan...`,
     heroVideo: "/videos/homevideo.webm",
 
     intro: {
-      title: "Bansal Hospital",
-      description: `At Bansal Hospital, we are pledged to provide best-in-class diagnosis and treatment facilities without compromising an inch on the safety of our patients. Bansal owns a wide range of technology from the most exclusive ones to the most basic ones. The Achieva 3.0T X-Series (a complete body scanner), Advance Elkta Infinity Radiotherapy (Best-in-class precision radiation therapy), Neuronavigation (An advanced surgical technology based on image guidance), Allura XPER FD20 Cath Lab (Performs a full spectrum of cardiac and vascular interventions), and PET-CT (Detects and stages most cancers accurately) are just a few names from the list.
+      title: "Lotus Valley Hospital",
+      description: `At Lotus Valley Hospital, we are pledged to provide best-in-class diagnosis and treatment facilities without compromising an inch on the safety of our patients. Lotus Valley owns a wide range of technology from the most exclusive ones to the most basic ones. The Achieva 3.0T X-Series (a complete body scanner), Advance Elkta Infinity Radiotherapy (Best-in-class precision radiation therapy), Neuronavigation (An advanced surgical technology based on image guidance), Allura XPER FD20 Cath Lab (Performs a full spectrum of cardiac and vascular interventions), and PET-CT (Detects and stages most cancers accurately) are just a few names from the list.
 
-We have a 300 bedded super specialty and provisions of 24*7 patient-focused care, all committed to provide unmatched healthcare services to our patients. Today, we stand as the leading and most trusted organ transplantation center in central India. The hospital is strategically located in the center of the city, making it accessible from all parts of Bhopal. Bansal Hospital has been successfully serving patients since 2014 and has emerged as the city’s most integrated healthcare service provider.`,
+We have a 300 bedded super specialty and provisions of 24*7 patient-focused care, all committed to provide unmatched healthcare services to our patients. Today, we stand as the leading and most trusted organ transplantation center in central India. The hospital is strategically located in the center of the city, making it accessible from all parts of Bhopal. Lotus Valley Hospital has been successfully serving patients since 2014 and has emerged as the city’s most integrated healthcare service provider.`,
     },
 
     stats: [
